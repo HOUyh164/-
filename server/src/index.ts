@@ -5,7 +5,7 @@ import questionsRouter from './routes/questions';
 import testRouter from './routes/test';
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 10000;
 
 // 中间件
 app.use(cors());

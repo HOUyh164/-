@@ -46,9 +46,9 @@ echo "===================================="
 echo ""
 
 # 检查端口是否被占用
-if lsof -Pi :5000 -sTCP:LISTEN -t >/dev/null ; then
-    echo "⚠️  端口 5000 已被占用，正在尝试停止..."
-    kill -9 $(lsof -t -i:5000) 2>/dev/null || true
+if lsof -Pi :10000 -sTCP:LISTEN -t >/dev/null ; then
+    echo "⚠️  端口 10000 已被占用，正在尝试停止..."
+    kill -9 $(lsof -t -i:10000) 2>/dev/null || true
 fi
 
 if lsof -Pi :3000 -sTCP:LISTEN -t >/dev/null ; then
@@ -57,7 +57,7 @@ if lsof -Pi :3000 -sTCP:LISTEN -t >/dev/null ; then
 fi
 
 # 启动后端服务器（后台运行）
-echo "🚀 启动后端服务器（端口 5000）..."
+echo "🚀 启动后端服务器（端口 10000）..."
 cd server
 npm run dev &
 SERVER_PID=$!
@@ -68,7 +68,7 @@ echo "⏳ 等待后端服务器启动..."
 sleep 5
 
 # 检查后端是否成功启动
-if curl -f http://localhost:5000/api/health >/dev/null 2>&1; then
+if curl -f http://localhost:10000/api/health >/dev/null 2>&1; then
     echo "✅ 后端服务器启动成功！"
 else
     echo "❌ 后端服务器启动失败，请检查错误信息"
@@ -88,7 +88,7 @@ echo "===================================="
 echo "   启动成功！"
 echo "===================================="
 echo ""
-echo "🌐 后端服务器: http://localhost:5000"
+echo "🌐 后端服务器: http://localhost:10000"
 echo "🌐 前端应用:   http://localhost:3000"
 echo ""
 echo "📱 正在尝试打开浏览器..."
@@ -126,7 +126,7 @@ cleanup() {
     
     # 确保端口释放
     sleep 2
-    kill -9 $(lsof -t -i:5000) 2>/dev/null || true
+    kill -9 $(lsof -t -i:10000) 2>/dev/null || true
     kill -9 $(lsof -t -i:3000) 2>/dev/null || true
     
     echo "✅ 服务器已停止"

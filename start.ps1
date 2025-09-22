@@ -55,7 +55,7 @@ Write-Host "   正在启动应用..." -ForegroundColor Yellow
 Write-Host "====================================" -ForegroundColor Cyan
 Write-Host ""
 Write-Host "后端服务器: " -NoNewline -ForegroundColor Green
-Write-Host "http://localhost:5000" -ForegroundColor Cyan
+Write-Host "http://localhost:10000" -ForegroundColor Cyan
 Write-Host "前端应用:   " -NoNewline -ForegroundColor Green
 Write-Host "http://localhost:3000" -ForegroundColor Cyan
 Write-Host ""

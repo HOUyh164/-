@@ -163,7 +163,7 @@ const ResultPage = () => {
             <div className="mt-6 p-4 bg-red-100 rounded-lg text-left">
               <p className="text-sm text-red-700 font-semibold mb-2">调试信息：</p>
               <ul className="text-xs text-red-600 space-y-1">
-                <li>• 确保后端服务器在 http://localhost:5000 运行</li>
+                <li>• 确保后端服务器在 http://localhost:10000 运行</li>
                 <li>• 检查浏览器控制台是否有错误</li>
                 <li>• 结果ID: {id}</li>
               </ul>

@@ -44,7 +44,7 @@ echo ====================================
 echo.
 
 REM 启动后端服务器（新窗口）
-echo 启动后端服务器（端口 5000）...
+echo 启动后端服务器（端口 10000）...
 start "后端服务器" cmd /k "cd server && npm run dev"
 
 REM 等待后端启动
@@ -60,7 +60,7 @@ echo ====================================
 echo   启动成功！
 echo ====================================
 echo.
-echo 后端服务器: http://localhost:5000
+echo 后端服务器: http://localhost:10000
 echo 前端应用:   http://localhost:3000
 echo.
 echo 正在打开浏览器...

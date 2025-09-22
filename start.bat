@@ -48,7 +48,7 @@ echo ====================================
 echo   正在启动应用...
 echo ====================================
 echo.
-echo 后端服务器: http://localhost:5000
+echo 后端服务器: http://localhost:10000
 echo 前端应用:   http://localhost:3000
 echo.
 echo 按 Ctrl+C 停止服务器
