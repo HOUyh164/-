@@ -49,7 +49,27 @@ eq-test-app/
 
 ## 快速开始
 
-### 安装依赖
+### 跨平台启动
+
+**Windows:**
+```bash
+# 方法1：双击运行
+start-fixed.bat
+
+# 方法2：命令行
+npm run dev
+```
+
+**Mac/Linux:**
+```bash
+# 添加执行权限（首次）
+chmod +x start-mac.sh
+
+# 启动应用
+./start-mac.sh
+```
+
+### 手动安装依赖
 
 1. 在项目根目录安装所有依赖：
 ```bash
@@ -148,6 +168,38 @@ npm start
 ## 贡献
 
 欢迎提交Issue和Pull Request来改进这个项目！
+
+## 🚀 Git 部署
+
+项目已配置好Git仓库，可直接推送到远程：
+
+```bash
+# 推送到GitHub
+git remote add origin https://github.com/YOUR_USERNAME/eq-test-webapp.git
+git branch -M main
+git push -u origin main
+
+# 或推送到Gitee
+git remote add origin https://gitee.com/YOUR_USERNAME/eq-test-webapp.git  
+git push -u origin master
+```
+
+详细说明请查看 `Git上传指南.md`
+
+## 🌍 跨平台支持
+
+- ✅ **Windows**: 使用 `start-fixed.bat` 或 `start.bat`
+- ✅ **Mac/Linux**: 使用 `start-mac.sh` 脚本
+- ✅ **所有平台**: 支持 `npm run dev` 命令
+
+## 📊 项目统计
+
+- 📁 **文件数量**: 34个文件
+- 📝 **代码行数**: 11,347行
+- 🎯 **测试题目**: 20道专业题目  
+- 📊 **评估维度**: 7个核心维度
+- 🎨 **UI组件**: 完全响应式设计
+- 🗄️ **数据存储**: SQLite本地数据库
 
 ## 许可证
 
